@@ -1,6 +1,9 @@
 package kosa.phone;
+
+import java.io.Serializable;
+
 //5.29
-public class PhoneInfo implements Comparable{ // implements Comparable<PhoneInfo>
+public class PhoneInfo implements Comparable, Serializable { // implements Comparable<PhoneInfo>
 	// 클래스 만들기 (전화번호 하나에 대한 도메인)
 	// (name, phoneNo, birth) : 필드
 	// 1. 필드 생성 / 2. 초기화 해야할 필드를 생각
@@ -67,6 +70,11 @@ public class PhoneInfo implements Comparable{ // implements Comparable<PhoneInfo
 
 	public void setBirth(String birth) {
 		this.birth = birth;
-	}	
+	}
+
+	@Override
+	public String toString() {
+		return "Member [name=" + name + ", phonNo=" + phonNo +  ", birth=" + birth + "]";
+	}
 
 }

@@ -2,10 +2,8 @@ package kosa.phone;
 
 import kosa.stram.Student;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 import java.util.stream.Stream;
 
 //5.29
@@ -53,13 +51,12 @@ public class Manager {
 
         //Stream<PhoneInfo> stream = list.stream();
         if (!list.isEmpty()) {
-            list.forEach(p-> {
+            list.forEach(p -> {
                 System.out.print(p.getName());
                 System.out.print(p.getPhonNo());
                 System.out.print(p.getBirth());
             });
-        }
-        else {
+        } else {
             System.out.println("등록된 연락처가 없습니다.");
         }
     }
@@ -169,4 +166,51 @@ public class Manager {
         Collections.sort(list);
     }
 
+    public void savePhoneInfo() {
+        ObjectOutputStream oos = null;
+
+        try {
+            oos = new ObjectOutputStream(new FileOutputStream("PhoneInfo.txt"));
+            oos.writeObject(list);
+
+            System.out.println("저장 완료");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                oos.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void loadPhoneInfo() {
+        ObjectInputStream ois = null;
+        List<PhoneInfo> loadedList = null;  // 리스트 초기화
+
+        try {
+            ois = new ObjectInputStream(new FileInputStream("PhoneInfo.txt"));
+
+            loadedList = (List<PhoneInfo>) ois.readObject();
+
+            // 1번 방식 
+            // System.out.println(loadedList);
+            // 2번 방식
+            if (loadedList != null) {
+                loadedList.stream().forEach(l -> l.show());
+            }
+            System.out.println();
+            System.out.println("불러오기 완료");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                ois.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
