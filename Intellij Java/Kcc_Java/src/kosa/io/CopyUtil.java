@@ -10,7 +10,7 @@ public class CopyUtil {
         if (source.isDirectory()) {  // 디렉토리인지 확인
             dest.mkdir();  // 디렉터리 생성
 
-            File[] fileList = source.listFiles();
+            File[] fileList = source.listFiles();  // 폴더로 들어왔을때 파일들을 리스트에 추가
             for (int i = 0; i < fileList.length; i++) {
                 File sourceFile = fileList[i];
                 if (sourceFile.isDirectory()) {
