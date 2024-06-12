@@ -15,7 +15,8 @@ public class CopyUtil {
                 File sourceFile = fileList[i];
                 if (sourceFile.isDirectory()) {
                     //new file(디렉토리 경로, 파일이름);
-                    copyDirectory(sourceFile, new File(dest, sourceFile.getName()));
+                    File s_destFile = new File(dest, sourceFile.getName());
+                    copyDirectory(sourceFile, s_destFile);
                 }else {
                     File destFile = new File(dest, sourceFile.getName());
                     copyFile(sourceFile, destFile);  // 파일 복사
