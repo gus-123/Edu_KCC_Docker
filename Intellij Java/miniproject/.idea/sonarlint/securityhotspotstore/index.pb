@@ -1,0 +1,15 @@
+
+h
+8Insurance_Complaint_Management_System/src/user/User.java,8\5\858ffda3ef8253315f2f75cee1cfd0e496d48133
+k
+;Insurance_Complaint_Management_System/src/user/General.java,b\c\bc7baee5555279b0ad31a5830849ae037fcfe9ba
+n
+>Insurance_Complaint_Management_System/src/general/General.java,8\6\864d23b5165e539e250b9ce8d42220b892d90029
+o
+?Insurance_Complaint_Management_System/src/general/WorkInfo.java,4\1\411e594d98629b04e308508bb9b3272270a78fdf
+y
+IInsurance_Complaint_Management_System/src/general/InsuranceMangement.java,c\f\cf431332490fbdcc2373fd0b1720ee51ecd6faa7
+p
+@Insurance_Complaint_Management_System/src/general/DataInput.java,3\7\37a10be8c424f231dcd3ccc2726f724fa1fc54ca
+~
+NInsurance_Complaint_Management_System/src/general/QualificationManagement.java,f\7\f77dda3245d6c2c8cf1550062513ffa0137a9daf
