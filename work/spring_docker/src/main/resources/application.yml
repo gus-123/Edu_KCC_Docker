@@ -10,7 +10,7 @@ spring:
 #    username: system
 #    password: oracle
 
-    url: "jdbc:oracle:thin:@database-1.cx48yw2o0dad.ap-northeast-2.rds.amazonaws.com:1521:ORCL" #localhost를 AWS 명으로 해주어야 됨.
+    url: "#####" #localhost를 AWS 명으로 해주어야 됨.
     username: sysdba
     password: oracleoracle!
 
